@@ -1,43 +1,36 @@
-/* eslint-disable react-native/no-inline-styles */
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import React from 'react';
-import {View} from 'react-native';
-import {BottomTabs} from './routes/BottomTabs/BottomTabs';
+import {NavigationContainer} from '@react-navigation/native';
+// import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
+import {StyleSheet, Text, View} from 'react-native';
+// import {ColorfulTabBar} from 'react-navigation-tabbar-collection';
+// import Icon from 'react-native-vector-icons/AntDesign';
+import BottomTabs from './routes/BottomTabs/BottomTabs';
+
+// const Tab: any = createBottomTabNavigator();
+
+// const DemoScreen = ({route}: any) => (
+//   <View style={styles.screen}>
+//     <Text>{route.name}</Text>
+//   </View>
+// );
 
 const App = () => {
   return (
-    <View style={{flex: 1}}>
+    <NavigationContainer>
       <BottomTabs />
-    </View>
+    </NavigationContainer>
   );
 };
 
-// const styles = StyleSheet.create({
-//   sectionContainer: {
-//     marginTop: 32,
-//     paddingHorizontal: 24,
-//   },
-//   sectionTitle: {
-//     fontSize: 24,
-//     fontWeight: '600',
-//   },
-//   sectionDescription: {
-//     marginTop: 8,
-//     fontSize: 18,
-//     fontWeight: '400',
-//   },
-//   highlight: {
-//     fontWeight: '700',
-//   },
-// });
-
 export default App;
+
+const styles = StyleSheet.create({
+  screen: {
+    width: '100%',
+    height: '100%',
+    flex: 6,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+});
