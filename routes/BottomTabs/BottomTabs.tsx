@@ -3,7 +3,7 @@ import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {StyleSheet, Text, View} from 'react-native';
 import {ColorfulTabBar} from 'react-navigation-tabbar-collection';
-import Icon from 'react-native-vector-icons/AntDesign';
+import AntDesign from 'react-native-vector-icons/AntDesign';
 import {t} from 'react-native-tailwindcss';
 
 const Tab: any = createBottomTabNavigator();
@@ -36,7 +36,7 @@ const BottomTabs = () => {
         options={{
           title: 'Home',
           icon: ({focused, color, size}: any) => (
-            <Icon name="home" size={size} color={color} />
+            <AntDesign name="home" size={size} color={color} />
           ),
           color: 'primary',
         }}
@@ -47,7 +47,7 @@ const BottomTabs = () => {
         options={{
           title: 'News',
           icon: ({focused, color, size}: any) => (
-            <Icon name="sharealt" size={size} color={color} />
+            <AntDesign name="sharealt" size={size} color={color} />
           ),
           color: 'info',
         }}
@@ -58,7 +58,7 @@ const BottomTabs = () => {
         options={{
           title: 'Chat',
           icon: ({focused, color, size}: any) => (
-            <Icon name="API" size={size} color={color} />
+            <AntDesign name="API" size={size} color={color} />
           ),
           color: 'warning',
         }}
@@ -69,7 +69,7 @@ const BottomTabs = () => {
         options={{
           title: 'Likes',
           icon: ({focused, color, size}: any) => (
-            <Icon name="hearto" size={size} color={color} />
+            <AntDesign name="hearto" size={size} color={color} />
           ),
           color: 'danger',
         }}
@@ -80,7 +80,7 @@ const BottomTabs = () => {
         options={{
           title: 'Settings',
           icon: ({focused, color, size}: any) => (
-            <Icon name="setting" size={size} color={color} />
+            <AntDesign name="setting" size={size} color={color} />
           ),
           color: 'success',
         }}
