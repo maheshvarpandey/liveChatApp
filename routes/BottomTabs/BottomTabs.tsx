@@ -1,4 +1,4 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {StyleSheet, Text, View} from 'react-native';
@@ -8,8 +8,10 @@ import {t} from 'react-native-tailwindcss';
 
 const Tab: any = createBottomTabNavigator();
 
-const DemoScreen = ({route}: any) => (
-  <View style={[styles.screen]}>
+const DemoScreen = ({ route }: any) => {
+  console.log('SCreen name', route);
+
+  return (<View style={[styles.screen]}>
     <View
       style={[
         t.bgGray100,
@@ -23,7 +25,8 @@ const DemoScreen = ({route}: any) => (
       <Text style={[t.textLg, t.textBlue600]}>{route.name}</Text>
     </View>
   </View>
-);
+  );
+};
 
 const BottomTabs = () => {
   return (
@@ -35,21 +38,10 @@ const BottomTabs = () => {
         component={DemoScreen}
         options={{
           title: 'Home',
-          icon: ({focused, color, size}: any) => (
+          icon: ({color, size}: any) => (
             <AntDesign name="home" size={size} color={color} />
           ),
           color: 'primary',
-        }}
-      />
-      <Tab.Screen
-        name="News"
-        component={DemoScreen}
-        options={{
-          title: 'News',
-          icon: ({focused, color, size}: any) => (
-            <AntDesign name="sharealt" size={size} color={color} />
-          ),
-          color: 'info',
         }}
       />
       <Tab.Screen
@@ -57,8 +49,8 @@ const BottomTabs = () => {
         component={DemoScreen}
         options={{
           title: 'Chat',
-          icon: ({focused, color, size}: any) => (
-            <AntDesign name="API" size={size} color={color} />
+          icon: ({color, size}: any) => (
+            <AntDesign name="wechat" size={size} color={color} />
           ),
           color: 'warning',
         }}
@@ -68,7 +60,7 @@ const BottomTabs = () => {
         component={DemoScreen}
         options={{
           title: 'Likes',
-          icon: ({focused, color, size}: any) => (
+          icon: ({color, size}: any) => (
             <AntDesign name="hearto" size={size} color={color} />
           ),
           color: 'danger',
@@ -79,7 +71,7 @@ const BottomTabs = () => {
         component={DemoScreen}
         options={{
           title: 'Settings',
-          icon: ({focused, color, size}: any) => (
+          icon: ({color, size}: any) => (
             <AntDesign name="setting" size={size} color={color} />
           ),
           color: 'success',
